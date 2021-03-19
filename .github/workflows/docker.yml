@@ -53,6 +53,8 @@ jobs:
       - name: Add Docker tags
         id: docker_meta
         uses: crazy-max/ghaction-docker-meta@v1
+        with:
+          images: ${{ github.repository }}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
